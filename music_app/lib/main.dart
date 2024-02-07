@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/controller/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,11 +18,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Music App",
-      theme: ThemeData(primaryColor: Colors.blue),
-      home: Scaffold(
-        appBar: AppBar(title: Text("Music app")),
-        body: Center(child: Text("Welcome to music app!")),
-      ),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      home: Scaffold(body: const Home_Page()),
     );
   }
 }
